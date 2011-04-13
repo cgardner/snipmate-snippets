@@ -1,0 +1,64 @@
+snippet getset Skeleton Getter and Setter
+	/**
+	 * ${3:undocumented class variable}
+	 * @var ${4:string}
+	 **/
+	${1:private} $${2:variable};
+	${10}
+
+	/**
+	 * Getter for $this->$2
+	 * @param void
+	 * @return $4
+	 * @author ${5:`g:snips_author`}
+	 **/
+	${7:private} function get${8:Variable}() {
+		return $this->$2;
+	} // end function get$8()
+
+	/**
+	 * Setter for $this->$2
+	 * @param $4
+	 * @return void
+	 * @author $5
+	 **/
+	$7 function set$8($arg0) {
+		$this->$2 = $arg0;
+		${9:return $this;}
+	} // end function set$8()
+snippet docf Function Skeleton
+	/**
+	 * ${4:undocumented function}
+	 * @param ${5:void}
+	 * @return ${6:void}
+	 * @author ${7:`g:snips_author`}
+	 **/
+	${1:public }function ${2:functionName}(${3}) {
+		${8}
+	} // end function $2
+snippet doct Unit Test Declaration
+	/**
+	 * ${4:undocumented function}
+	 * @param ${5:void}
+	 * @return ${6:void}
+	 * @author ${7:`g:snips_author`}
+	 * @group ${9:all}
+	 * @covers ${10}
+	 **/
+	${1:public}function test${2:Variable}(${3}) {
+		${11}
+	} // end function test$2
+snippet vd variable dump
+	var_dump(${1});${2}
+snippet cls class skeleton
+	/**
+	 * ${1:Undocumented Class}
+	 * @package: ${2:Package}
+	 * @author: ${3:`g:snips_author`}
+	 **/
+	class ${4:className} {
+		${5}
+	} // end class $4
+snippet php open only
+	<?php
+	${1}

@@ -62,3 +62,25 @@ snippet cls class skeleton
 snippet php open only
 	<?php
 	${1}
+snippet fld hook_schema field
+	'${1:field_name}' => array(
+		'description' => '${2:Field Description}',
+		'type' => '${3:type}',${4}
+		'unsigned' => TRUE,
+		'not null' => TRUE,
+	),
+snippet tbl hook_schema table
+	$schema['${1:table_name}'] = array(
+		'description' => '${2:Description of the table}',
+		'fields' => array(
+		  ${3}
+		),
+		'primary key' => array(${4}),
+		'unique keys' => array(${5}),
+		'foreign keys' => array(${6}),
+	);
+snippet foreign hook_schema foreign id relation
+	'${1:relation_name}' => array(
+		'table' => '${2:table}',
+		'columns' => array('${3:local}' => '${4:$3}'),
+	),

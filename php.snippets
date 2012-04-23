@@ -29,11 +29,17 @@ snippet docf Function Skeleton
 	 * ${4:undocumented function}
 	 * @param ${5:void}
 	 * @return ${6:void}
-	 * @author ${7:`g:snips_author`}
 	 **/
 	${1:public }function ${2:functionName}(${3}) {
 		${8}
 	} // end function $2
+snippet docp Property Skeleton
+	/**
+	 * ${4:undocumented property}
+	 * @value ${5:mixed}
+	 **/
+	${1:var} ${2:propertyName}${3};
+	${6}
 snippet doct Unit Test Declaration
 	/**
 	 * ${4:undocumented function}
